@@ -1,3 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    --header: #e2e8f0;
+    --main: #f1f5f9;
+    --footer: #f1f5f9;
+    --shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    --addBookBtn: #f8fafc;
+    box-sizing: border-box;
+}
+
+body {
+    height: min(100vh);
+    margin: 0;
+    display: grid;
+    grid-template: auto 1fr auto / 1fr;
+}
+
+/* Header */
+header {
+    background-color: var(--header);
+    box-shadow: var(--shadow);
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header h1 {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+header img {
+    height: 3rem;
+}
+
+/* Main */
+main {
+    background-color: var(--main);
+    padding: 2.5rem 1.5rem;
+}
+
+main .button button {
+    width: auto;
+    font-size: 1.7rem;
+    background-color: var(--addBookBtn);
+    box-shadow: 5px 5px;
+    outline: none;
+    padding: 0.5rem;
+}
+
+main .button button:hover {
+    transform: scale(1.1);
+}
+
+main .button button:active {
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer);
+}
 
 /* Footer */
 footer {
