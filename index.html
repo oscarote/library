@@ -19,6 +19,23 @@
             <button type="button">Add a book</button>
         </div>
         <div class="books">Holi</div>
+        <div class="modal" id="addBookModal">
+            <form class="addBookForm" id="addBookForm">
+              <h3>Add new book</h3>
+              <label for="title"></label>
+              <input type="text" id="title" name="title" maxlength="100" required>
+              <label for="title"></label>
+              <input type="text" id="author" name="author" maxlength="100" required>
+              <label for="pages"></label>
+              <input type="number" id="pages" name="pages" max="10000" required>
+              <div class="isRead">
+                <label for="isRead">Have you read it?</label>
+                <input class="checkbox" type="checkbox" id="isRead">
+              </div>
+              <button type="submit">Submit</button>
+              <button type="reset">Reset</button>
+            </form>
+          </div>
     </main>
     <footer>Copyright ©
         <script>document.write(new Date().getFullYear())</script> <a href="https://github.com/oscarote" target="_blank">
