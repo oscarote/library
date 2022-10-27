@@ -11,6 +11,7 @@
     --cardbg: white;
     --borderRadius: 30px;
     box-sizing: border-box;
+    word-wrap: break-word;
 }
 
 body {
@@ -44,6 +45,12 @@ main {
     background-color: var(--main);
     box-shadow: var(--shadow);
     padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    place-self: center;
 }
 
 main .button button {
@@ -67,7 +74,7 @@ main .button button:active {
 .bookCards {
     margin-top: 3rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
 }
 
@@ -75,7 +82,7 @@ main .button button:active {
     background-color: var(--cardbg);
     box-shadow: var(--shadow);
     border-radius: var(--borderRadius);
-    padding: 1rem 2rem;
+    padding: 1rem 2rem;    
 }
 
 .card h4 {
@@ -85,6 +92,26 @@ main .button button:active {
 
 .card p {
     margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.removeCard,
+.read,
+.notRead {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.removeCard {
+    background-color: lightcoral;
+}
+
+.read {
+    background-color: lightgreen;
+}
+
+.notRead {
+    background-color: lightsalmon;
 }
 
 /* Input modal */
@@ -153,7 +180,10 @@ main .button button:active {
     gap: 1rem;
 }
 
-.formButtons button {
+.formButtons button,
+.removeCard,
+.read,
+.notRead {
     font-size: 1.5rem;
     border: none;
     padding: 0.5rem 2rem;
@@ -163,12 +193,18 @@ main .button button:active {
     outline: none;
 }
 
-.formButtons button:hover {
+.formButtons button:hover,
+.removeCard:hover,
+.read:hover,
+.notRead:hover {
     filter: brightness(90%);
     transform: scale(1.1);
 }
 
-.formButtons button:active {
+.formButtons button:active,
+.removeCard:active,
+.read:active,
+.notRead:active {
     transform: scale(1.2);
 }
 
