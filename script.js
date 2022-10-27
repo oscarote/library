@@ -97,7 +97,6 @@ function refreshLibrary() {
 
 // Card buttons
 function toggleRead() {
-    console.log(this.getAttribute("class"));
     const dataAtt = this.closest("div").getAttribute("data-attribute");
     if (this.getAttribute("class") === "read") {
         myLibrary[dataAtt].read = false;
@@ -108,8 +107,11 @@ function toggleRead() {
 }
 
 function deleteCard() {
-    console.log(this.closest("div").getAttribute("data-attribute"));
-    const dataAtt = this.closest("div").getAttribute("data-attribute");
-    myLibrary.splice(dataAtt, 1);
-    refreshLibrary();
+    if (confirm("Are you sure?")) {
+        const dataAtt = this.closest("div").getAttribute("data-attribute");
+        myLibrary.splice(dataAtt, 1);
+        refreshLibrary();
+    } else {
+        alert("Book was not removed");
+    }
 }
