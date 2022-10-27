@@ -43,11 +43,15 @@ let myLibrary = [];
 
 function addBookToLibrary(e) {
     e.preventDefault();
-    const tittle = document.getElementById("title").value;
+    const title = document.getElementById("title").value;
     const author = document.getElementById("author").value;
     const pages = document.getElementById("pages").value;
     const read = document.getElementById("isRead").checked;
-    myLibrary.push(new Book(tittle, author, pages, read));
+    if (myLibrary.some(item => item.title === title)) {
+        alert("Book was already in the library");
+        return;
+    }
+    myLibrary.push(new Book(title, author, pages, read));
     closeModal();
     document.getElementById("addBookForm").reset();
     refreshLibrary();
