@@ -16,24 +16,33 @@
     </header>
     <main>
         <div class="button">
-            <button type="button">Add a book</button>
+            <button type="button" id="addBook">Add a book</button>
         </div>
         <div class="bookCards"></div>
+        <div class="overlay"></div>
         <div class="modal" id="addBookModal">
             <form class="addBookForm" id="addBookForm">
               <h3>Add new book</h3>
-              <label for="title"></label>
-              <input type="text" id="title" name="title" maxlength="100" required>
-              <label for="title"></label>
-              <input type="text" id="author" name="author" maxlength="100" required>
-              <label for="pages"></label>
-              <input type="number" id="pages" name="pages" max="10000" required>
+              <div>
+                  <label for="title">Title</label>
+                  <input type="text" id="title" name="title" maxlength="100" required>
+              </div>
+              <div>
+                  <label for="author">Author</label>
+                  <input type="text" id="author" name="author" maxlength="100" required>
+              </div>
+              <div>
+                  <label for="pages">Pages</label>
+                  <input type="number" id="pages" name="pages" max="10000" required>
+              </div>
               <div class="isRead">
                 <label for="isRead">Have you read it?</label>
                 <input class="checkbox" type="checkbox" id="isRead">
               </div>
-              <button type="submit">Submit</button>
-              <button type="reset">Reset</button>
+              <div class="formButtons">
+                  <button type="submit">Submit</button>
+                  <button type="reset">Reset</button>
+              </div>
             </form>
           </div>
     </main>
