@@ -1,6 +1,5 @@
 // Object constructor
 function Book(title, author, pages, read) {
-    console.log(this.title);
     this.title = title;
     this.author = author;
     this.pages = pages;
