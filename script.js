@@ -43,12 +43,13 @@ let myLibrary = [];
 
 function addBookToLibrary(e) {
     e.preventDefault();
+    const errorMsg = document.querySelector(".errorMsg");
     const title = document.getElementById("title").value;
     const author = document.getElementById("author").value;
     const pages = document.getElementById("pages").value;
     const read = document.getElementById("isRead").checked;
     if (myLibrary.some(item => item.title === title)) {
-        alert("Book was already in the library");
+        errorMsg.innerText = "This book is already in the library";
         return;
     }
     myLibrary.push(new Book(title, author, pages, read));

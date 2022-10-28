@@ -216,6 +216,12 @@ main .button button:active {
     background-color: red;
 }
 
+.errorMsg {
+    color: red;
+    font-size: 0.8rem;  
+    max-width: 80%;  
+}
+
 /* Overlay */
 .overlay {
     position: fixed;
