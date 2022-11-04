@@ -1,13 +1,20 @@
-// Object constructor
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.info = function () {
+// Class declaration for book
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+
+    get info() {
+        return this.isReadMsg();
+    }
+
+    isReadMsg() {
         let readMsg = null;
-        read === "true" ? (readMsg = "already read") : (readMsg = "not read yet");
-        return `${title} by ${author}, ${pages} pages, ${readMsg}`
+        this.read === true ? (readMsg = "already read") : (readMsg = "not read yet");
+        return `${this.title} by ${this.author}, ${this.pages} pages, ${readMsg}`
     }
 }
 
